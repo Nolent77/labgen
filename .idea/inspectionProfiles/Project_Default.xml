@@ -1,0 +1,84 @@
+<component name="InspectionProjectProfileManager">
+  <profile version="1.0">
+    <option name="myName" value="Project Default" />
+    <inspection_tool class="HtmlUnknownAttribute" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="myValues">
+        <value>
+          <list size="1">
+            <item index="0" class="java.lang.String" itemvalue="indeterminate" />
+          </list>
+        </value>
+      </option>
+      <option name="myCustomValuesEnabled" value="true" />
+    </inspection_tool>
+    <inspection_tool class="HtmlUnknownTag" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="myValues">
+        <value>
+          <list size="8">
+            <item index="0" class="java.lang.String" itemvalue="nobr" />
+            <item index="1" class="java.lang.String" itemvalue="noembed" />
+            <item index="2" class="java.lang.String" itemvalue="comment" />
+            <item index="3" class="java.lang.String" itemvalue="noscript" />
+            <item index="4" class="java.lang.String" itemvalue="embed" />
+            <item index="5" class="java.lang.String" itemvalue="script" />
+            <item index="6" class="java.lang.String" itemvalue="button-action" />
+            <item index="7" class="java.lang.String" itemvalue="button-info" />
+          </list>
+        </value>
+      </option>
+      <option name="myCustomValuesEnabled" value="true" />
+    </inspection_tool>
+    <inspection_tool class="PyArgumentListInspection" enabled="true" level="ERROR" enabled_by_default="true" editorAttributes="ERRORS_ATTRIBUTES" />
+    <inspection_tool class="PyCompatibilityInspection" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="ourVersions">
+        <value>
+          <list size="2">
+            <item index="0" class="java.lang.String" itemvalue="3.10" />
+            <item index="1" class="java.lang.String" itemvalue="3.11" />
+          </list>
+        </value>
+      </option>
+    </inspection_tool>
+    <inspection_tool class="PyPackageRequirementsInspection" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="ignoredPackages">
+        <value>
+          <list size="33">
+            <item index="0" class="java.lang.String" itemvalue="Automat" />
+            <item index="1" class="java.lang.String" itemvalue="async-timeout" />
+            <item index="2" class="java.lang.String" itemvalue="django-mqtt-bridge" />
+            <item index="3" class="java.lang.String" itemvalue="cffi" />
+            <item index="4" class="java.lang.String" itemvalue="psycopg2" />
+            <item index="5" class="java.lang.String" itemvalue="pyasn1" />
+            <item index="6" class="java.lang.String" itemvalue="pycparser" />
+            <item index="7" class="java.lang.String" itemvalue="constantly" />
+            <item index="8" class="java.lang.String" itemvalue="pyasn1-modules" />
+            <item index="9" class="java.lang.String" itemvalue="pyOpenSSL" />
+            <item index="10" class="java.lang.String" itemvalue="txaio" />
+            <item index="11" class="java.lang.String" itemvalue="daphne" />
+            <item index="12" class="java.lang.String" itemvalue="hyperlink" />
+            <item index="13" class="java.lang.String" itemvalue="service-identity" />
+            <item index="14" class="java.lang.String" itemvalue="six" />
+            <item index="15" class="java.lang.String" itemvalue="cryptography" />
+            <item index="16" class="java.lang.String" itemvalue="zope.interface" />
+            <item index="17" class="java.lang.String" itemvalue="incremental" />
+            <item index="18" class="java.lang.String" itemvalue="attrs" />
+            <item index="19" class="java.lang.String" itemvalue="channels-redis" />
+            <item index="20" class="java.lang.String" itemvalue="hiredis" />
+            <item index="21" class="java.lang.String" itemvalue="autobahn" />
+            <item index="22" class="java.lang.String" itemvalue="aioredis" />
+            <item index="23" class="java.lang.String" itemvalue="channels" />
+            <item index="24" class="java.lang.String" itemvalue="typing_extensions" />
+            <item index="25" class="java.lang.String" itemvalue="paho-mqtt" />
+            <item index="26" class="java.lang.String" itemvalue="msgpack" />
+            <item index="27" class="java.lang.String" itemvalue="idna" />
+            <item index="28" class="java.lang.String" itemvalue="Twisted" />
+            <item index="29" class="java.lang.String" itemvalue="zope-interface" />
+            <item index="30" class="java.lang.String" itemvalue="ruamel-yaml" />
+            <item index="31" class="java.lang.String" itemvalue="backports-zoneinfo" />
+            <item index="32" class="java.lang.String" itemvalue="ruamel-yaml-clib" />
+          </list>
+        </value>
+      </option>
+    </inspection_tool>
+  </profile>
+</component>
