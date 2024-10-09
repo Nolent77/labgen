@@ -13,21 +13,8 @@ public class Move {
                         {"#"," ","#"," ","#"," ","#"," ","#","#"},
                         {"#"," "," "," ","#"," ","#"," "," ","#"},
                         {"#","#","#","#","#","#","#","#","S","#"},};
-        affiche(tableau);
+        AutoSolver.affiche(tableau);
         move(tableau);
-    }
-    static void affiche(String[][] tab){
-        for (int i = 0; i < tab.length; i++) {
-            for (int j = 0; j < tab[i].length; j++) {
-                if (tab[i][j]=="\uD83d\uDE21"){
-                    System.out.print(tab[i][j]+"");
-                }
-                else {
-                    System.out.print(tab[i][j]+" ");
-                }
-            }
-            System.out.println();
-        }
     }
 
     public static void move(String[][]GiveTab) {
@@ -43,7 +30,7 @@ public class Move {
         }
         GiveTab[x][y]="\uD83D\uDE21";
         while (!End){
-            affiche(GiveTab);
+            AutoSolver.affiche(GiveTab);
 
             Scanner sc = new Scanner(System.in);
 
@@ -83,12 +70,6 @@ public class Move {
                     x+=1;
                 }
             }
-
-
-
-
-
-
 
         }
         System.out.println("GG you win");

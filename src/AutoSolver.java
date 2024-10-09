@@ -4,19 +4,19 @@ import java.util.Random;
 public class AutoSolver {
     public static void main(String[] args) {
 
-        String tableau[][]=
-                        {       {"#","E","#","#","#","#","#","#","#","#"},
-                                {"#"," ","P","#"," "," "," ","#"," ","#"},
-                                {"#","#"," ","#"," ","#","#","#"," ","#"},
-                                {"#"," "," "," "," ","#"," ","#"," ","#"},
-                                {"#"," ","#","#","#"," "," "," "," ","#"},
-                                {"#"," ","#"," "," "," ","#","#"," ","#"},
-                                {"#"," ","#"," ","#"," ","#"," "," ","#"},
-                                {"#"," ","#"," ","#"," ","#"," ","#","#"},
-                                {"#"," "," "," ","#"," ","#"," "," ","#"},
-                                {"#","#","#","#","#","#","#","#","S","#"},};
-//        tableau = mazeGenerator(10, 30);
-        chemin(tableau);
+//        String tableau[][]=
+//                        {       {"#","E","#","#","#","#","#","#","#","#"},
+//                                {"#"," ","P","#"," "," "," ","#"," ","#"},
+//                                {"#","#"," ","#"," ","#","#","#"," ","#"},
+//                                {"#"," "," "," "," ","#"," ","#"," ","#"},
+//                                {"#"," ","#","#","#"," "," "," "," ","#"},
+//                                {"#"," ","#"," "," "," ","#","#"," ","#"},
+//                                {"#"," ","#"," ","#"," ","#"," "," ","#"},
+//                                {"#"," ","#"," ","#"," ","#"," ","#","#"},
+//                                {"#"," "," "," ","#"," ","#"," "," ","#"},
+//                                {"#","#","#","#","#","#","#","#","S","#"},};
+////        tableau = mazeGenerator(10, 30);
+//        chemin(tableau);
 
     }
     static boolean realisable(String[][] tab){
@@ -81,7 +81,12 @@ public class AutoSolver {
     static void affiche(String[][] tab){
         for (int i = 0; i < tab.length; i++) {
             for (int j = 0; j < tab[i].length; j++) {
-                System.out.print(tab[i][j] + " ");
+                if (tab[i][j]=="\uD83d\uDE21"){
+                    System.out.print(tab[i][j]+"");
+                }
+                else {
+                    System.out.print(tab[i][j]+" ");
+                }
             }
             System.out.println();
         }
@@ -165,62 +170,4 @@ public class AutoSolver {
             affiche(tab);
         }
     }
-
-
-//        public static String[][] mazeGenerator(int line, int column) {
-//            Random a = new Random();
-//            String[][] tab = new String[line][column];
-//            for (int i = 0; i < line; i++) {
-//                for (int j = 0; j < column; j++) {
-//                    if (i == 0 || i == line - 1 || j == 0 || j == column - 1) {
-//                        tab[i][j] = "#";
-//                    } else {
-//                        tab[i][j] = (a.nextInt(4) == 0) ? "#" : " ";
-//                    }
-//
-////                if (i >= 1 && j >= 1 && j < column-1 && i < line-1) {
-////                    tab[i][j] = " ";
-////                }
-//                }
-//
-//            }
-//            return tab;
-//        }
-public static int randomValue() {
-    Random rand = new Random();
-    return rand.nextInt(10) + 1;
-}
-public static String[][] mazeGenerator(int line, int column) {
-    boolean alreadyExist = true; // variable to have only one enter
-    boolean existingExist = true; // variable to have only one output
-    Random a = new Random();
-    String[][] tab = new String[line][column];
-    for (int i = 0; i < line; i++) {
-        for (int j = 0; j < column; j++) {
-            if (i == 0 || i == line - 1 || j == 0 || j == column - 1) {
-                tab[i][j] = "#";
-            } else {
-                tab[i][j] = (a.nextInt(2) == 0) ? "#" : " ";
-            }
-        }
-    }
-    for (int i = 0; i < line; i++) {
-        for (int j = 0; j < column; j++) {
-            if ( alreadyExist) {
-                tab[0][randomValue()] = "E";
-                alreadyExist = false;
-            }
-            if (existingExist) {
-                tab[line - 1][randomValue()] = "S";
-                existingExist = false;
-            }
-            System.out.print(tab[i][j]);
-
-        }
-        System.out.println();
-    }
-    return tab;
-}
-
-
 }
