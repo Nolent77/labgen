@@ -13,14 +13,14 @@ public class Main {
     public static String[][] mazeGenerator(int line, int column) {
         boolean alreadyExist = true; // variable to have only one enter
         boolean existingExist = true; // variable to have only one output
-        Random a = new Random();
+        Random aleaM = new Random();
         String[][] tab = new String[line][column];
         for (int i = 0; i < line; i++) {
             for (int j = 0; j < column; j++) {
                 if (i == 0 || i == line - 1 || j == 0 || j == column - 1) {
                     tab[i][j] = "#";
                 } else {
-                    tab[i][j] = (a.nextInt(2) == 0) ? "#" : " ";
+                    tab[i][j] = (aleaM.nextInt(4) == 0) ? "#" : " ";
                 }
             }
         }
@@ -35,7 +35,6 @@ public class Main {
                     existingExist = false;
                 }
                 System.out.print(tab[i][j]);
-
             }
             System.out.println();
         }
