@@ -37,6 +37,11 @@ public class Move {
             String move = sc.nextLine();
             System.out.println(move);
 
+            if (move.equals("ghazi le bg")){
+                GiveTab[x][y]=" ";
+                AutoSolver.chemin(GiveTab);
+            }
+
             if (move.equals("d") ||move.equals("D")) {
                 if (GiveTab[x][y+1]== " " ){
                     GiveTab[x][y]=" " ;
