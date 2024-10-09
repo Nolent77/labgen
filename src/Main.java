@@ -1,15 +1,52 @@
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
-public class Main {
-    public static void main(String[] args) {
-        //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-        // to see how IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
 
-        for (int i = 1; i <= 5; i++) {
-            //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-            // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-            System.out.println("i = " + i);
+import java.util.Random;  
+
+public class Main {
+
+    public static int randomValue() {
+        Random rand = new Random();
+        return rand.nextInt(10) + 1;
+    }
+
+    public static String[][] mazeGenerator(int line, int column) {
+        boolean alreadyExist = true; // variable to have only one enter
+        boolean existingExist = true; // variable to have only one output
+        Random a = new Random();
+        String[][] tab = new String[line][column];
+        for (int i = 0; i < line; i++) {
+            for (int j = 0; j < column; j++) {
+                if (i == 0 || i == line - 1 || j == 0 || j == column - 1) {
+                    tab[i][j] = "#";
+                } else {
+                    tab[i][j] = (a.nextInt(2) == 0) ? "#" : " ";
+                }
+            }
+        }
+        for (int i = 0; i < line; i++) {
+            for (int j = 0; j < column; j++) {
+                if ( alreadyExist) {
+                    tab[0][randomValue()] = "E";
+                    alreadyExist = false;
+                }
+                if (existingExist) {
+                    tab[line - 1][randomValue()] = "S";
+                    existingExist = false;
+                }
+                System.out.print(tab[i][j]);
+
+            }
+            System.out.println();
+        }
+        return tab;
+    }
+
+
+        public static void main (String[]args){
+            System.out.println(mazeGenerator(10, 30));
+
+
         }
     }
-}
+
