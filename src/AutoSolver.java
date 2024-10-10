@@ -170,7 +170,7 @@ public class AutoSolver {
                     }
                 }
             }
-            affiche(tab);
+            Main.showMaze(tab);
         }
     }
 }

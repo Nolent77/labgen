@@ -24,7 +24,7 @@ public class Main {
 
     public static void mazeGen(String[][] lab, boolean[][] visited, int x, int y, int line, int column) {
         visited[x][y] = true;
-        lab[x][y] = "   ";
+        lab[x][y] = " ";
 
         int[] mixDir = {0, 1, 2, 3};
         Shuffle(mixDir);
@@ -37,7 +37,7 @@ public class Main {
             int pDirY = (dy[direction] * 2) + y;
             if (pDirX > 0 && pDirY > 0 && pDirX < line - 1 && pDirY < column - 1 && !visited[pDirX][pDirY]) {
                 visited[pDirX][pDirY] = true;
-                lab[dx[direction] + x][dy[direction] + y] = "   ";
+                lab[dx[direction] + x][dy[direction] + y] = " ";
                 mazeGen(lab, visited, pDirX, pDirY, line, column);
             }
         }
@@ -47,28 +47,36 @@ public class Main {
         String[][] tab = new String[line][column];
         for (int i = 0; i < line; i++) {
             for (int j = 0; j < column; j++) {
-                tab[i][j] = " # ";
+                tab[i][j] = "#";
             }
         }
         for (int i = 0; i < line; i++) {
-            tab[i][0] = " # ";
-            tab[i][column - 1] = " # ";
+            tab[i][0] = "#";
+            tab[i][column - 1] = "#";
         }
         for (int j = 0; j < column; j++) {
-            tab[0][j] = " # ";
-            tab[line - 1][j] = " # ";
+            tab[0][j] = "#";
+            tab[line - 1][j] = "#";
         }
 
-        tab[0][posE] = " E ";
-        tab[line - 1][posS] = " S ";
+        tab[0][posE] = "E";
+        tab[line - 1][posS] = "S";
 
         return tab;
     }
 
+//    public static void showMaze(String[][] maze) {
+//        for (int i = 0; i < maze.length; i++) {
+//            for (int j = 0; j < maze[i].length; j++) {
+//                System.out.print(maze[i][j]);
+//            }
+//            System.out.println();
+//        }
+//    }
     public static void showMaze(String[][] maze) {
         for (int i = 0; i < maze.length; i++) {
             for (int j = 0; j < maze[i].length; j++) {
-                System.out.print(maze[i][j]);
+                System.out.print(" "+maze[i][j]+" ");
             }
             System.out.println();
         }
@@ -217,7 +225,7 @@ public class Main {
         System.out.println(mazeDisplay(line, column, posE, posS));  // Affichage du labyrinthe
 
         showMaze(lab);
-
+        AutoSolver.chemin(lab);
     }
 }
 
