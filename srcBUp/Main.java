@@ -1,6 +1,7 @@
-import java.util.Objects;
 import java.util.Random;
 import java.util.Scanner;
+
+
 
 public class Main {
 
@@ -151,12 +152,13 @@ public class Main {
 
     public static void main(String[] args) {
 
-        System.out.println("------------------------------------------------------------------------");
-        System.out.println("  ◤◢◤◢◤◢◤◢◤◢◤◢◤◢◤————Welcome to Mad Maze————◥◣◥◣◥◣◥◣◥◣◥◣◥◣◥");
-        System.out.println("------------------------------------------------------------------------");
-        System.out.println("Mad Maze is a generator of mazes with several difficulty options ");
-        System.out.println("including an option to create your own maze with your preferences !!");
-        System.out.println("------------------------------------------------------------------------");
+        System.out.println("-----------------------------------------------------------------------");
+        System.out.println("Bienvenue sur Mad Maze !!!");
+        System.out.println("-----------------------------------------------------------------------");
+        System.out.println("Mad Maze est un générateur de labyrinthe avec plusieurs options de");
+        System.out.println("difficulté dont une option pour créer, avec vos préférences, votre");
+        System.out.println("labyrinthe.");
+        System.out.println("-----------------------------------------------------------------------");
         Scanner saisie = new Scanner(System.in);
 
         int line = 0;
@@ -173,40 +175,40 @@ public class Main {
                 diff = saisie.nextInt();
             } else {
                 System.out.println("⚠ Saisie incorrecte (merci de respecter les consignes indiquées) ⚠");
-                System.out.println("------------------------------------------------------------------------");
+                System.out.println("-----------------------------------------------------------------------");
                 saisie.next();
             }
         }
-        if (diff == 1) { // Easy
+        if (diff == 1) { // Facile
             line = 7;
             column = 7;
             posE = 1;
             posS = column - 2;
-            System.out.println("------------------------------------------------------------------------");
+            System.out.println("-----------------------------------------------------------------------");
             System.out.println("Difficulté choisie : Facile");
         }
-        if (diff == 2) { // Medium
+        if (diff == 2) { // Moyenne
             line = 13;
             column = 13;
             posE = 1;
             posS = column - 2;
-            System.out.println("------------------------------------------------------------------------");
+            System.out.println("-----------------------------------------------------------------------");
             System.out.println("Difficulté choisie : Moyenne");
         }
-        if (diff == 3) { // Hard
+        if (diff == 3) { // Difficile
             line = 19;
             column = 19;
             posE = 1;
             posS = column - 2;
-            System.out.println("------------------------------------------------------------------------");
+            System.out.println("-----------------------------------------------------------------------");
             System.out.println("Difficulté choisie : Difficile");
         }
-        if (diff == 4) { // Extreme
+        if (diff == 4) { // Extrême
             line = 25;
             column = 25;
             posE = 1;
             posS = column - 2;
-            System.out.println("------------------------------------------------------------------------");
+            System.out.println("-----------------------------------------------------------------------");
             System.out.println("Difficulté choisie : Extrême");
         }
         if (diff == 5) { // Impossible
@@ -214,115 +216,84 @@ public class Main {
             column = 31;
             posE = 1;
             posS = column - 2;
-            System.out.println("------------------------------------------------------------------------");
+            System.out.println("-----------------------------------------------------------------------");
             System.out.println("Difficulté choisie : Impossible");
-            System.out.println("------------------------------------------------------------------------");
+            System.out.println("-----------------------------------------------------------------------");
         }
-        if (diff == 6) { // Custom
-            System.out.println("------------------------------------------------------------------------");
+        if (diff == 6) { // Personnalisée
+            System.out.println("-----------------------------------------------------------------------");
             System.out.println("Difficulté choisie : Personnalisée");
-            System.out.println("------------------------------------------------------------------------");
-            String mazeS = "CONF";
-            while (mazeS.equals("CONF")) {
-                do {
-                    System.out.println("Enter the width (odd integer) :");
-                    while (!saisie.hasNextInt()) {
-                        System.out.println("⚠ Incorrect entry (please follow instructions) ⚠");
-                        saisie.next(); // Ignorer l'entrée incorrecte
-                    }
-                    column = saisie.nextInt();
-                    if (column % 2 == 0) {
-                        System.out.println("⚠ La largeur doit être un entier impair ⚠");
-                    }
-                } while (column % 2 == 0); // Continue tant que ce n'est pas un impair
+            System.out.println("-----------------------------------------------------------------------");
 
-                // Saisie de la hauteur (doit être un entier impair)
-                do {
-                    System.out.println("Saisissez la hauteur (entier impair) :");
-                    while (!saisie.hasNextInt()) {
-                        System.out.println("⚠ Incorrect entry (please follow instructions) ⚠");
-                        saisie.next(); // Ignorer l'entrée incorrecte
-                    }
-                    line = saisie.nextInt();
-                    if (line % 2 == 0) {
-                        System.out.println("⚠ La hauteur doit être un entier impair ⚠");
-                    }
-                } while (line % 2 == 0); // Continue tant que ce n'est pas un impair
-
-                // Saisie de la position de l'entrée (entier impair entre 1 et column-2)
-                do {
-                    System.out.println("Saisissez la position de l'entrée (entier impair entre 1 et " + (column - 2) + ") :");
-                    while (!saisie.hasNextInt()) {
-                        System.out.println("⚠ Incorrect entry (please follow instructions) ⚠");
-                        saisie.next(); // Ignorer l'entrée incorrecte
-                    }
-                    posE = saisie.nextInt();
-                    if (posE % 2 == 0 || posE < 1 || posE > column - 2) {
-                        System.out.println("⚠ Incorrect entry (please follow instructions) ⚠");
-                    }
-                } while (posE % 2 == 0 || posE < 1 || posE > column - 2);
-
-                // Saisie de la position de la sortie (entier impair entre 1 et column-2)
-                do {
-                    System.out.println("Saisissez la position de la sortie (entier impair entre 1 et " + (column - 2) + ") :");
-                    while (!saisie.hasNextInt()) {
-                        System.out.println("⚠ Incorrect entry (please follow instructions) ⚠");
-                        saisie.next(); // Ignorer l'entrée incorrecte
-                    }
-                    posS = saisie.nextInt();
-                    if (posS % 2 == 0 || posS < 1 || posS > column - 2) {
-                        System.out.println("⚠ Incorrect entry (please follow instructions) ⚠");
-                    }
-                } while (posS % 2 == 0 || posS < 1 || posS > column - 2);
-                do {
-                    if (mazeS.equals("GEN")) {
-                    System.out.println("------------------------------------------------------------------------");
-                    System.out.println("Maze generated");
-                    System.out.println("------------------------------------------------------------------------");
-
-                    String[][] array = new String[line][column];  // Initiating of array with line & column
-                    boolean[][] visited = new boolean[line][column];  // Initiating of visited with line & column
-
-                    array = mazeGridDisplay(line, column, posE, posS);
-
-                    Main m = new Main();
-                    m.mazeGen(array, visited, 1, 1, line, column);
-
-                    System.out.println(mazeGridDisplay(line, column, posE, posS));  // Show the maze
-
-                    showMaze(array);
-                    AutoSolver.chemin(array);
-                }
-                else if (mazeS.equals("QUIT")) {
-                    System.out.println("------------------------------------------------------------------------");
-                    System.out.println("Mad Maze is closing, thank you for using it !");
-                    System.out.println("Credits : Draxan LT, Nolhan O, Liam D, Ghazi K");
-                    System.out.println("------------------------------------------------------------------------");
-                    System.exit(0);
-                }
-                else if (mazeS.equals("CONF"));
-                    System.out.println("------------------------------------------------------------------------");
-                    System.out.println("What do you want to do (in full maj) ?");
-                    System.out.println("[ GEN = Generate the maze | CONF = configurate parameters of the maze | QUIT = Quit the program ]");
-
-                    while (!saisie.hasNextLine()) {
-                        System.out.println("⚠ Incorrect entry (please follow instructions) ⚠");
-                        saisie.next(); // Ignorer l'entrée incorrecte
-                    }
-                    mazeS = saisie.nextLine();
-//                    if (posS % 2 == 0 || posS < 1 || posS > column - 2) {
-//                        System.out.println("⚠ Incorrect entry (please follow instructions) ⚠");
-//                    }
-                } while (!Objects.equals(mazeS, "GEN") || !Objects.equals(mazeS, "CONF") || !Objects.equals(mazeS, "QUIT"));
-
-            }
-
-            System.out.println("------------------------------------------------------------------------");
-            }
             // Saisie de la largeur (doit être un entier impair)
+            do {
+                System.out.println("Saisissez la largeur (entier impair) :");
+                while (!saisie.hasNextInt()) {
+                    System.out.println("⚠ Saisie incorrecte (merci de saisir un entier) ⚠");
+                    saisie.next(); // Ignorer l'entrée incorrecte
+                }
+                column = saisie.nextInt();
+                if (column % 2 == 0) {
+                    System.out.println("⚠ La largeur doit être un entier impair ⚠");
+                }
+            } while (column % 2 == 0); // Continue tant que ce n'est pas un impair
 
+            // Saisie de la hauteur (doit être un entier impair)
+            do {
+                System.out.println("Saisissez la hauteur (entier impair) :");
+                while (!saisie.hasNextInt()) {
+                    System.out.println("⚠ Saisie incorrecte (merci de saisir un entier) ⚠");
+                    saisie.next(); // Ignorer l'entrée incorrecte
+                }
+                line = saisie.nextInt();
+                if (line % 2 == 0) {
+                    System.out.println("⚠ La hauteur doit être un entier impair ⚠");
+                }
+            } while (line % 2 == 0); // Continue tant que ce n'est pas un impair
 
+            // Saisie de la position de l'entrée (entier impair entre 1 et column-2)
+            do {
+                System.out.println("Saisissez la position de l'entrée (entier impair entre 1 et " + (column - 2) + ") :");
+                while (!saisie.hasNextInt()) {
+                    System.out.println("⚠ Saisie incorrecte (merci de saisir un entier) ⚠");
+                    saisie.next(); // Ignorer l'entrée incorrecte
+                }
+                posE = saisie.nextInt();
+                if (posE % 2 == 0 || posE < 1 || posE > column - 2) {
+                    System.out.println("⚠ La position doit être un entier impair entre 1 et " + (column - 2) + " ⚠");
+                }
+            } while (posE % 2 == 0 || posE < 1 || posE > column - 2);
 
+            // Saisie de la position de la sortie (entier impair entre 1 et column-2)
+            do {
+                System.out.println("Saisissez la position de la sortie (entier impair entre 1 et " + (column - 2) + ") :");
+                while (!saisie.hasNextInt()) {
+                    System.out.println("⚠ Saisie incorrecte (merci de saisir un entier) ⚠");
+                    saisie.next(); // Ignorer l'entrée incorrecte
+                }
+                posS = saisie.nextInt();
+                if (posS % 2 == 0 || posS < 1 || posS > column - 2) {
+                    System.out.println("⚠ La position doit être un entier impair entre 1 et " + (column - 2) + " ⚠");
+                }
+            } while (posS % 2 == 0 || posS < 1 || posS > column - 2);
+        }
+
+        System.out.println("-----------------------------------------------------------------------");
+        System.out.println("Génération du labyrinthe");
+        System.out.println("-----------------------------------------------------------------------");
+
+        String[][] lab = new String[line][column];  // Initialisation du tableau lab
+        boolean[][] visited = new boolean[line][column];  // Initialisation du tableau visited
+
+        lab = mazeGridDisplay(line, column, posE, posS);
+
+        Main m = new Main();
+        m.mazeGen(lab, visited, 1, 1, line, column);
+
+        System.out.println(mazeGridDisplay(line, column, posE, posS));  // Affichage du labyrinthe
+
+        showMaze(lab);
+        AutoSolver.chemin(lab);
     }
 }
 

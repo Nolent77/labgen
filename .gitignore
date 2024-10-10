@@ -3,6 +3,8 @@ out/
 !**/src/main/**/out/
 !**/src/test/**/out/
 /.idea/workspace.xml
+/slides
+/srcBUp
 
 ### Eclipse ###
 .apt_generated
