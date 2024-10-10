@@ -39,6 +39,7 @@ public class Move {
             if (move.equals("Ghazi and Liam the bg")){
                 GiveTab[x][y]=" ";
                 AutoSolver.chemin(GiveTab);
+                End = true;
             }
 
             if (move.equals("d") ||move.equals("D")) {

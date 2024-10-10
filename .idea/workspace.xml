@@ -6,6 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="0bcf364b-9960-4a30-a24c-61ea712c3940" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AutoSolver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AutoSolver.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Move.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Move.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -18,6 +19,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Application.AutoSolver.executor": "Run",
     "Application.Main.executor": "Run",
     "Application.Move.executor": "Run",
     "git-widget-placeholder": "AutoSolver",
