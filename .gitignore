@@ -4,7 +4,9 @@ out/
 !**/src/test/**/out/
 /.idea/workspace.xml
 /slides
-/srcBUp
+/srcbackup/Main.java
+/srcbackup/AutoSolver.java
+/srcbackup/Move.java
 
 ### Eclipse ###
 .apt_generated

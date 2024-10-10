@@ -7,16 +7,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f4ef5ee0-68b3-4886-8d76-2b1e4aedcdb5" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/srcBUp/AutoSolver.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/srcBUp/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/srcBUp/Move.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/AutoSolver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AutoSolver.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-    </list>
+    <list default="true" id="f4ef5ee0-68b3-4886-8d76-2b1e4aedcdb5" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -69,7 +60,7 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="JavaScript Debug.index.html">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="algo-java-labgen-2024-l1-cergy-algo-groupe-09" />
@@ -77,8 +68,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="index.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/algo-java-labgen-2024-l1-cergy-algo-groupe-09/doc/index.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JavaScript Debug.index.html" />
         <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
@@ -100,7 +95,7 @@
       <option name="presentableId" value="Default" />
       <updated>1728575270572</updated>
       <workItem from="1728575276599" duration="1543000" />
-      <workItem from="1728582675754" duration="16964000" />
+      <workItem from="1728582675754" duration="17401000" />
     </task>
     <servers />
   </component>
