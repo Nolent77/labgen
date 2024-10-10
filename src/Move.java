@@ -36,7 +36,7 @@ public class Move {
 
             String move = sc.nextLine();
 
-            if (move.equals("ghazi le bg")){
+            if (move.equals("Ghazi and Liam the bg")){
                 GiveTab[x][y]=" ";
                 AutoSolver.chemin(GiveTab);
             }
@@ -44,7 +44,7 @@ public class Move {
             if (move.equals("d") ||move.equals("D")) {
                 if (GiveTab [x][y+1]=="#"){
                     GiveTab[x][y]="\uD83D\uDE21";
-                    System.out.println("Il y a un mur");
+                    System.out.println("--------------You can't we have wall----------------");
                 }
                 if (GiveTab[x][y+1]== " " ){
                     GiveTab[x][y]=" " ;
@@ -55,7 +55,7 @@ public class Move {
             if (move.equals("q") ||move.equals("Q")) {
                 if (GiveTab [x][y-1]=="#"){
                     GiveTab[x][y]="\uD83D\uDE21";
-                    System.out.println("Il y a un mur");
+                    System.out.println("--------------You can't we have wall----------------");
                 }
                 if (GiveTab[x][y-1]== " " ){
                     GiveTab[x][y]=" " ;
@@ -66,7 +66,7 @@ public class Move {
             if (move.equals("z") ||move.equals("Z")) {
                 if (GiveTab [x-1][y]=="#"){
                     GiveTab[x][y]="\uD83D\uDE21";
-                    System.out.println("Il y a un mur");
+                    System.out.println("--------------You can't we have wall----------------");
                 }
                 if (GiveTab[x-1][y]== " " ){
                     GiveTab[x][y]=" " ;
@@ -77,7 +77,7 @@ public class Move {
             if (move.equals("s") ||move.equals("S")) {
                 if (GiveTab [x+1][y]=="#"){
                     GiveTab[x][y]="\uD83D\uDE21";
-                    System.out.println("Il y a un mur");
+                    System.out.println("--------------You can't we have wall----------------");
                 }
                 if (GiveTab[x+1][y]=="S"){
                     End = true;
