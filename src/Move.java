@@ -4,14 +4,14 @@ public class Move {
     public static void main(String[] args) {
         String tableau[][]=
                 {       {"#","E","#","#","#","#","#","#","#","#"},
-                        {"#"," "," ","#"," "," "," ","#"," ","#"},
-                        {"#"," "," ","#"," ","#","#","#"," ","#"},
+                        {"#"," "," ","#"," "," "," "," "," ","#"},
+                        {"#","#"," ","#"," ","#","#","#"," ","#"},
                         {"#"," "," "," "," ","#"," ","#"," ","#"},
                         {"#"," ","#","#","#"," "," "," "," ","#"},
                         {"#"," ","#"," "," "," ","#","#"," ","#"},
                         {"#"," ","#"," ","#"," ","#"," "," ","#"},
                         {"#"," ","#"," ","#"," ","#"," ","#","#"},
-                        {"#"," "," "," ","#"," ","#"," "," ","#"},
+                        {"#"," ","#"," ","#"," ","#"," "," ","#"},
                         {"#","#","#","#","#","#","#","#","S","#"},};
         AutoSolver.affiche(tableau);
         move(tableau);
@@ -35,7 +35,6 @@ public class Move {
             Scanner sc = new Scanner(System.in);
 
             String move = sc.nextLine();
-            System.out.println(move);
 
             if (move.equals("ghazi le bg")){
                 GiveTab[x][y]=" ";
@@ -43,6 +42,10 @@ public class Move {
             }
 
             if (move.equals("d") ||move.equals("D")) {
+                if (GiveTab [x][y+1]=="#"){
+                    GiveTab[x][y]="\uD83D\uDE21";
+                    System.out.println("Il y a un mur");
+                }
                 if (GiveTab[x][y+1]== " " ){
                     GiveTab[x][y]=" " ;
                     GiveTab[x][y+1]="\uD83D\uDE21";
@@ -50,6 +53,10 @@ public class Move {
                 }
             }
             if (move.equals("q") ||move.equals("Q")) {
+                if (GiveTab [x][y-1]=="#"){
+                    GiveTab[x][y]="\uD83D\uDE21";
+                    System.out.println("Il y a un mur");
+                }
                 if (GiveTab[x][y-1]== " " ){
                     GiveTab[x][y]=" " ;
                     GiveTab[x][y-1]="\uD83D\uDE21";
@@ -57,6 +64,10 @@ public class Move {
                 }
             }
             if (move.equals("z") ||move.equals("Z")) {
+                if (GiveTab [x-1][y]=="#"){
+                    GiveTab[x][y]="\uD83D\uDE21";
+                    System.out.println("Il y a un mur");
+                }
                 if (GiveTab[x-1][y]== " " ){
                     GiveTab[x][y]=" " ;
                     GiveTab[x-1][y]="\uD83D\uDE21";
@@ -64,6 +75,10 @@ public class Move {
                 }
             }
             if (move.equals("s") ||move.equals("S")) {
+                if (GiveTab [x+1][y]=="#"){
+                    GiveTab[x][y]="\uD83D\uDE21";
+                    System.out.println("Il y a un mur");
+                }
                 if (GiveTab[x+1][y]=="S"){
                     End = true;
                 }
@@ -74,6 +89,7 @@ public class Move {
                     GiveTab[x+1][y]="\uD83D\uDE21";
                     x+=1;
                 }
+
             }
 
         }
