@@ -15,6 +15,7 @@ public class Main {
         public static final String BACKGROUND_GREEN = "\u001B[42m"; // --- Background Color in Green ---
         public static final String BACKGROUND_RED = "\u001B[41m"; // --- Background Color in Red ---
         public static final String BACKGROUND_CYAN = "\u001B[46m"; // --- Background Color in Cyan ---
+        public static final String BACKGROUND_PURPLE = "\033[95m"; // --- Background Color in Purple ---
         public static final String RESET = "\u001B[0m"; // --- Reset Text Status ---
         public static final String BLACK = "\u001B[30m"; // --- Text Color in Black ---
     }
@@ -139,6 +140,9 @@ public class Main {
                 // --- Set Solver Path Color to Yellow ---
                 else if (maze[i][j].equals("V")) {
                     System.out.print(SquareColor.BACKGROUND_YELLOW+"   "+SquareColor.RESET);
+                }
+                else if (maze[i][j].equals("\uD83D\uDE21")) {
+                    System.out.print(SquareColor.BACKGROUND_PURPLE+"   "+SquareColor.RESET);
                 }
                 // --- Set Path Color to Cyan ---
                 else {
@@ -291,7 +295,7 @@ public class Main {
                     System.out.println(mazeGridDisplay(line, column, posE, posS));  // Show the maze
 
                     showMaze(array);
-                    AutoSolver.chemin(array);
+                    Move.move(array);
                 }
                 else if (mazeS.equals("QUIT")) {
                     System.out.println("------------------------------------------------------------------------");
