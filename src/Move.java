@@ -18,9 +18,8 @@ public class Move {
 //    }
 
     public static void move(String[][]GiveTab) {
-        //ajouter x et y
-        int x = 0;
-        int y = 0;
+        int x = 1;
+        int y = 1;
         boolean End = false;
         //mettre le joueur sous E
         for (int i = 0; i < GiveTab[0].length; i++) {
@@ -42,7 +41,7 @@ public class Move {
             //appeler le solver
             if (move.equals("Ghazi and Liam the bg")){
                 GiveTab[x][y]=" ";
-                AutoSolver.chemin(GiveTab);
+                AutoSolver.pathSolver(GiveTab);
                 End = true;
             }
                 //les mouvement ZQSD avec un print pour dire qu'il y a un mure

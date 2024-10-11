@@ -93,10 +93,10 @@ public class AutoSolver {
     }
 
 
-    static void chemin(String[][] tab){
+    static void pathSolver(String[][] tab){
 
-        int x=0;
-        int y=0;
+        int x=1;
+        int y=1;
         boolean fin=false;
         boolean realisable=true;
 
@@ -106,7 +106,7 @@ public class AutoSolver {
                 y=i;
             }
         }
-        long start = System.nanoTime();
+        long start = System.currentTimeMillis();
 
         while (!fin && tab[x][y] != "S") {
 
@@ -157,8 +157,10 @@ public class AutoSolver {
                 fin = true;
             }
         }
-        long end = System.nanoTime();
-        System.out.println("Le solver s'est terminé en "+((end-start)/10000000.0)+" millisecondes");
+        long end = System.currentTimeMillis();
+        if (end-start > 0){
+        System.out.println("The Solver finished the maze in "+((end-start))+" milliseconds");
+        } else { System.out.println("The Solver finished the maze in "+((end-start))+" millisecond"); }
         if (!realisable){
             System.out.println("Non réalisable");
         }
