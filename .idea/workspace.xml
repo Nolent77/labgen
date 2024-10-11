@@ -9,7 +9,9 @@
   <component name="ChangeListManager">
     <list default="true" id="bbd143cc-c297-4e1a-91d8-a445e2d86429" name="Changes" comment="" />
     <list default="true" id="f4ef5ee0-68b3-4886-8d76-2b1e4aedcdb5" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/AutoSolver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AutoSolver.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Sauvegarde.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Sauvegarde.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,8 +46,14 @@
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "git-widget-placeholder": "main",
     "node.js.selected.package.tslint": "(autodetect)"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.AutoSolver.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\dlaun\OneDrive\CodingF\Codes\algo-java-labgen-2024-l1-cergy-algo-groupe-09\srcBUp" />
