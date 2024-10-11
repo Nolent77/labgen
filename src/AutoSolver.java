@@ -1,3 +1,4 @@
+import java.sql.SQLOutput;
 import java.util.Random;
 
 
@@ -40,29 +41,28 @@ public class AutoSolver {
         int comparaisons=0;
 
         //Boucle qui cherche autour de la case actuelle et agit en conséquence
-        while (!fin && tab[x][y] != "S") {
-
+        while (!fin && tab[x][y] != "S" && !(tab[x][y].equals("S"))) {
 
             //Ces 4 if cherchent des cases jamais visitées
-            if (tab[x + 1][y] == " " || tab[x + 1][y] == "S") {
+            if (tab[x + 1][y] == " " || tab[x + 1][y] == "S" || tab[x + 1][y].equals(" ") || tab[x + 1][y].equals("S")) {
                 tab[x][y] = "V";
                 x += 1;
                 comparaisons+=1;
             }
 
-            else if (tab[x][y + 1] == " " || tab[x][y + 1] == "S") {
+            else if (tab[x][y + 1] == " " || tab[x][y + 1] == "S" || tab[x][y+1].equals(" ")) {
                 tab[x][y] = "V";
                 y += 1;
                 comparaisons+=2;
             }
 
-            else if (tab[x - 1][y] == " " || tab[x - 1][y] == "S") {
+            else if (tab[x - 1][y] == " " || tab[x - 1][y] == "S" || tab[x - 1][y].equals(" ")) {
                 tab[x][y] = "V";
                 x -= 1;
                 comparaisons+=3;
             }
 
-            else if (tab[x][y - 1] == " " || tab[x][y - 1] == "S") {
+            else if (tab[x][y - 1] == " " || tab[x][y - 1] == "S" || tab[x][y-1].equals(" ")) {
                 tab[x][y] = "V";
                 y -= 1;
                 comparaisons+=4;
@@ -70,25 +70,25 @@ public class AutoSolver {
 
 
             //Ces 4 fonctions cherchent des cases déjà visitées si aucune case alentoure est non visitée
-            else if (tab[x + 1][y] == "V") {
+            else if (tab[x + 1][y] == "V" || tab[x+1][y].equals("V")) {
                 tab[x][y] = "C";
                 x += 1;
                 comparaisons+=5;
             }
 
-            else if (tab[x][y + 1] == "V") {
+            else if (tab[x][y + 1] == "V" || tab[x][y+1].equals("V")) {
                 tab[x][y] = "C";
                 y += 1;
                 comparaisons+=6;
             }
 
-            else if (tab[x - 1][y] == "V") {
+            else if (tab[x - 1][y] == "V" || tab[x-1][y].equals("V")) {
                 tab[x][y] = "C";
                 x -= 1;
                 comparaisons+=7;
             }
 
-            else if (tab[x][y - 1] == "V") {
+            else if (tab[x][y - 1] == "V" || tab[x][y-1].equals("V")) {
                 tab[x][y] = "C";
                 y -= 1;
                 comparaisons+=8;
@@ -113,7 +113,7 @@ public class AutoSolver {
         else{
             for (int i = 1; i < tab.length-1; i++) {
                 for (int j = 1; j < tab[i].length-1; j++) {
-                    if (tab[i][j]=="C") {
+                    if (tab[i][j]=="C"||tab[i][j].equals("C")) {
                         tab[i][j] = " ";
                     }
                 }

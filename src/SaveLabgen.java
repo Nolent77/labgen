@@ -70,6 +70,7 @@ public class SaveLabgen {
         FileWriter fileReader = new FileWriter(labyrinthes); // A stream that connects to the text file
         BufferedWriter bufferedWriter = new BufferedWriter(fileReader);
 // Write your data
+        System.out.println("File saved as "+nomFich);
         for (int i=0;i< tab.length;i++) {
             for (int j = 0; j < tab[i].length; j++) {
                 bufferedWriter.write(tab[i][j]);

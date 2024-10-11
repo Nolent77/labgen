@@ -29,6 +29,7 @@ public class Move {
             }
 
         }
+        System.out.println(x+" "+y);
         //Placer le joueur
         GiveTab[x][y]="\uD83D\uDE21";
         //Jusqu'a que sa fini
@@ -39,58 +40,60 @@ public class Move {
             Scanner sc = new Scanner(System.in);
 
             String move = sc.nextLine();
+            System.out.println(move);
             //Appeler le solver
             if (move.equals("Ghazi and Liam the bg")){
                 GiveTab[x][y]=" ";
                 AutoSolver.pathSolver(GiveTab);
                 End = true;
             }
-                //Les mouvement ZQSD avec un print pour dire qu'il y a un mure
+            //Les mouvement ZQSD avec un print pour dire qu'il y a un mur
             if (move.equals("d") ||move.equals("D")) {
-                if (GiveTab [x][y+1]=="#"){
+                if (GiveTab [x][y+1]=="#" || GiveTab[x][y+1].equals("#")){
                     GiveTab[x][y]="\uD83D\uDE21";
                     System.out.println("--------------You can't we have wall----------------");
                 }
-                if (GiveTab[x][y+1]== " " ){
+                if (GiveTab[x][y+1]== " "  || GiveTab[x][y+1].equals(" ")){
                     GiveTab[x][y]=" " ;
                     GiveTab[x][y+1]="\uD83D\uDE21";
                     y+=1;
                 }
             }
             if (move.equals("q") ||move.equals("Q")) {
-                if (GiveTab [x][y-1]=="#"){
+                if (GiveTab [x][y-1]=="#" || GiveTab[x][y-1].equals("#")){
                     GiveTab[x][y]="\uD83D\uDE21";
                     System.out.println("--------------You can't we have wall----------------");
                 }
-                if (GiveTab[x][y-1]== " " ){
+                if (GiveTab[x][y-1]== " "  || GiveTab[x][y-1].equals(" ")){
                     GiveTab[x][y]=" " ;
                     GiveTab[x][y-1]="\uD83D\uDE21";
                     y-=1;
                 }
             }
             if (move.equals("z") ||move.equals("Z")) {
-                if (GiveTab [x-1][y]=="#"){
+                if (GiveTab [x-1][y]=="#" || GiveTab[x-1][y].equals("#")){
                     GiveTab[x][y]="\uD83D\uDE21";
                     System.out.println("--------------You can't we have wall----------------");
                 }
-                if (GiveTab[x-1][y]== " " ){
+                if (GiveTab[x-1][y]== " "  || GiveTab[x-1][y].equals(" ")){
                     GiveTab[x][y]=" " ;
                     GiveTab[x-1][y]="\uD83D\uDE21";
                     x-=1;
                 }
             }
             //Pour finir la boucle quand on est sur le S
-            if (move.equals("s") ||move.equals("S")) {
-                if (GiveTab [x+1][y]=="#"){
+            if (move.equals("s") || move.equals("S")) {
+                System.out.println(GiveTab[x+1][y]);
+                if (GiveTab [x+1][y]=="#" || GiveTab[x+1][y].equals("#")){
                     GiveTab[x][y]="\uD83D\uDE21";
                     System.out.println("--------------You can't we have wall----------------");
                 }
-                if (GiveTab[x+1][y]=="S"){
+                if (GiveTab[x+1][y]=="S" || GiveTab[x+1][y].equals("S")){
                     End = true;
                 }
 
 
-                if (GiveTab[x+1][y]== " " ){
+                if (GiveTab[x+1][y]== " " || GiveTab[x+1][y].equals(" ")){
                     GiveTab[x][y]=" " ;
                     GiveTab[x+1][y]="\uD83D\uDE21";
                     x+=1;
