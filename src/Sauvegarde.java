@@ -1,33 +1,35 @@
 import java.io.*;
 
 public class Sauvegarde {
-    public static void main(String[] args) throws IOException {
-                String tableau[][]=
-                        {       {"#","E","#","#","#","#","#","#","#","#"},
-                                {"#"," "," ","#"," "," "," ","#"," ","#"},
-                                {"#","#"," ","#"," ","#","#","#"," ","#"},
-                                {"#"," "," "," "," ","#"," ","#"," ","#"},
-                                {"#"," ","#","#","#"," "," "," "," ","#"},
-                                {"#"," ","#"," "," "," ","#","#"," ","#"},
-                                {"#"," ","#"," ","#"," ","#"," "," ","#"},
-                                {"#"," ","#"," ","#"," ","#"," ","#","#"},
-                                {"#"," "," "," ","#"," ","#"," "," ","#"},
-                                {"#","#","#","#","#","#","#","#","S","#"},};
-        String tableaudeux[][]=
-                {       {"#","E","#","#","#","#","#","#","#","#"},
-                        {"#"," "," "," "," "," "," "," "," ","#"},
-                        {"#","#","#","#","#","#","#","#"," ","#"},
-                        {"#"," "," "," "," "," "," ","#"," ","#"},
-                        {"#"," ","#","#","#"," "," "," "," ","#"},
-                        {"#"," ","#"," ","#"," ","#","#"," ","#"},
-                        {"#"," ","#"," ","#"," ","#"," "," ","#"},
-                        {"#"," ","#","#","#"," ","#"," "," ","#"},
-                        {"#"," "," "," ","#"," ","#"," "," ","#"},
-                        {"#","#","#","#","#","#","#","#","S","#"},};
-
-        Enregistre(tableau);
-
-    }
+    //    public static void main(String[] args) throws IOException {
+//                String tableau[][]=
+//                        {       {"#","E","#","#","#","#","#","#","#","#"},
+//                                {"#"," "," ","#"," "," "," ","#"," ","#"},
+//                                {"#","#"," ","#"," ","#","#","#"," ","#"},
+//                                {"#"," "," "," "," ","#"," ","#"," ","#"},
+//                                {"#"," ","#","#","#"," "," "," "," ","#"},
+//                                {"#"," ","#"," "," "," ","#","#"," ","#"},
+//                                {"#"," ","#"," ","#"," ","#"," "," ","#"},
+//                                {"#"," ","#"," ","#"," ","#"," ","#","#"},
+//                                {"#"," "," "," ","#"," ","#"," "," ","#"},
+//                                {"#","#","#","#","#","#","#","#","S","#"},};
+//        String tableaudeux[][]=
+//                {       {"#","E","#","#","#","#","#","#","#","#"},
+//                        {"#"," "," "," "," "," "," "," "," ","#"},
+//                        {"#","#","#","#","#","#","#","#"," ","#"},
+//                        {"#"," "," "," "," "," "," ","#"," ","#"},
+//                        {"#"," ","#","#","#"," "," "," "," ","#"},
+//                        {"#"," ","#"," ","#"," ","#","#"," ","#"},
+//                        {"#"," ","#"," ","#"," ","#"," "," ","#"},
+//                        {"#"," ","#","#","#"," ","#"," "," ","#"},
+//                        {"#"," "," "," ","#"," ","#"," "," ","#"},
+//                        {"#","#","#","#","#","#","#","#","S","#"},};
+//
+//        Enregistre(tableau);
+//        String[][] truc=readLabFile("C:/Users/liamd/Documents/Labyrinthes/lab01.labgen");
+//        affiche(truc);
+//
+//    }
     static void affiche(String[][] tab){
         for (int i = 0; i < tab.length; i++) {
             for (int j = 0; j < tab[i].length; j++) {
@@ -79,10 +81,9 @@ public class Sauvegarde {
 
 
     static public String[][] readLabFile(String filepath) throws IOException {
-        File labyrinthes = new File("C:/Users/liamd/Documents/Labyrinthes/lab01.labgen");
         BufferedReader bf= null;
-        bf = new BufferedReader(new FileReader(labyrinthes));
-        System.out.println(labyrinthes);
+        bf = new BufferedReader(new FileReader(filepath));
+        System.out.println(filepath);
         System.out.println("Reading the file using readLine() method:");
         String contentLine = bf.readLine();
         String tab[][]= new String[contentLine.length()][contentLine.length()];
@@ -98,7 +99,7 @@ public class Sauvegarde {
             contentLine = bf.readLine();
             l+=1;
         }
-            return tab;
+        return tab;
     }
 
 
