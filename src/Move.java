@@ -18,9 +18,11 @@ public class Move {
 //    }
 
     public static void move(String[][]GiveTab) {
+        //ajouter x et y
         int x = 0;
         int y = 0;
         boolean End = false;
+        //mettre le joueur sous E
         for (int i = 0; i < GiveTab[0].length; i++) {
             if (GiveTab[0][i]=="E") {
                 x = 1;
@@ -28,20 +30,22 @@ public class Move {
             }
 
         }
+        //placer le joueur
         GiveTab[x][y]="\uD83D\uDE21";
         while (!End){
+            //afficher le laby
             Main.showMaze(GiveTab);
-
+            //recuperer les touche
             Scanner sc = new Scanner(System.in);
 
             String move = sc.nextLine();
-
+            //appeler le solver
             if (move.equals("Ghazi and Liam the bg")){
                 GiveTab[x][y]=" ";
                 AutoSolver.chemin(GiveTab);
                 End = true;
             }
-
+                //les mouvement ZQSD avec un print pour dire qu'il y a un mure
             if (move.equals("d") ||move.equals("D")) {
                 if (GiveTab [x][y+1]=="#"){
                     GiveTab[x][y]="\uD83D\uDE21";
@@ -75,6 +79,7 @@ public class Move {
                     x-=1;
                 }
             }
+            //pour finir la boucle quand on est sur le S
             if (move.equals("s") ||move.equals("S")) {
                 if (GiveTab [x+1][y]=="#"){
                     GiveTab[x][y]="\uD83D\uDE21";
@@ -94,6 +99,7 @@ public class Move {
             }
 
         }
+        //sortir du while pour afficher
         System.out.println("GG you win");
 
 }
