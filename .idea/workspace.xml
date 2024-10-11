@@ -6,17 +6,10 @@
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
-  <component name="AutoImportSettings">
-    <option name="autoReloadType" value="SELECTIVE" />
-  </component>
   <component name="ChangeListManager">
     <list default="true" id="f4ef5ee0-68b3-4886-8d76-2b1e4aedcdb5" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Move.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Move.java" afterDir="false" />
-    </list>
-    <list default="true" id="fbdc208f-55fb-467b-a767-ffaf08af2791" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/src/Sauvegarde.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Sauvegarde.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AutoSolver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AutoSolver.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,25 +39,10 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Application.AutoSolver.executor": "Run",
     "Application.Main.executor": "Run",
-    "Application.Sauvegarde.executor": "Run",
-    "git-widget-placeholder": "Sauvegarde",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.32088888"
-    "Application.Main.executor": "Run",
-    "Application.Move.executor": "Run",
-    "JavaScript Debug.index.html.executor": "Run",
     "git-widget-placeholder": "main",
-    "ignore.virus.scanning.warn.message": "true",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/dlaun/OneDrive/CodingF/Codes/algo-java-labgen-2024-l1-cergy-algo-groupe-09/srcBUp",
-    "node.js.detected.package.eslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+    "node.js.selected.package.tslint": "(autodetect)"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -118,17 +96,6 @@
       <workItem from="1728630943247" duration="1466000" />
     </task>
     <servers />
-  </component>
-  <component name="Vcs.Log.Tabs.Properties">
-    <option name="TAB_STATES">
-      <map>
-        <entry key="MAIN">
-          <value>
-            <State />
-          </value>
-        </entry>
-      </map>
-    </option>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />

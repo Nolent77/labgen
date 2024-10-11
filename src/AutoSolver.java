@@ -106,7 +106,7 @@ public class AutoSolver {
                 y=i;
             }
         }
-        long start = System.currentTimeMillis();
+        long start = System.nanoTime();
 
         while (!fin && tab[x][y] != "S") {
 
@@ -157,8 +157,8 @@ public class AutoSolver {
                 fin = true;
             }
         }
-        long end = System.currentTimeMillis();
-        System.out.println("Le solver s'est terminé en "+((end-start))+" millisecondes");
+        long end = System.nanoTime();
+        System.out.println("Le solver s'est terminé en "+((end-start)/10000000.0)+" millisecondes");
         if (!realisable){
             System.out.println("Non réalisable");
         }
