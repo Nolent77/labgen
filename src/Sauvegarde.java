@@ -26,7 +26,7 @@ public class Sauvegarde {
                         {"#","#","#","#","#","#","#","#","S","#"},};
 
         Enregistre(tableau);
-        affiche(readLabFile("C:/Users/liamd/Documents/Labyrinthes/lab01.labgen"));
+
     }
     static void affiche(String[][] tab){
         for (int i = 0; i < tab.length; i++) {
@@ -54,7 +54,7 @@ public class Sauvegarde {
         }
         int nombreFich = 2;
         String nomFich="lab01.labgen";
-        while (new File("C:/Users/liamd/Documents/Labyrinthes/"+nomFich).isFile()){
+        while (new File("C:/Users/"+Nom+"/Documents/Labyrinthes/"+nomFich).isFile()){
             if (nombreFich<10){
                 nomFich="lab"+"0"+nombreFich+".labgen";
             }
@@ -64,7 +64,7 @@ public class Sauvegarde {
             nombreFich++;
         }
 
-        File labyrinthes = new File("C:/Users/liamd/Documents/Labyrinthes/"+nomFich);
+        File labyrinthes = new File("C:/Users/"+Nom+"/Documents/Labyrinthes/"+nomFich);
         FileWriter fileReader = new FileWriter(labyrinthes); // A stream that connects to the text file
         BufferedWriter bufferedWriter = new BufferedWriter(fileReader);
 // Write your data

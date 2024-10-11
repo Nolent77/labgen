@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fbdc208f-55fb-467b-a767-ffaf08af2791" name="Changes" comment="" />
+    <list default="true" id="fbdc208f-55fb-467b-a767-ffaf08af2791" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/src/Sauvegarde.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Sauvegarde.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -15,6 +17,8 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Application.Main.executor": "Run",
+    "Application.Sauvegarde.executor": "Run",
     "git-widget-placeholder": "Sauvegarde",
     "node.js.selected.package.tslint": "(autodetect)",
     "project.structure.last.edited": "Project",
