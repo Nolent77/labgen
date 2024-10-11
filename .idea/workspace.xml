@@ -8,6 +8,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bbd143cc-c297-4e1a-91d8-a445e2d86429" name="Changes" comment="" />
+    <list default="true" id="f4ef5ee0-68b3-4886-8d76-2b1e4aedcdb5" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/src/AutoSolver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AutoSolver.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />

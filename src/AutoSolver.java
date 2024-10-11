@@ -106,7 +106,8 @@ public class AutoSolver {
                 y=i;
             }
         }
-        long start = System.currentTimeMillis();
+        long start = System.nanoTime();
+        int loops=0;
 
         while (!fin && tab[x][y] != "S") {
 
@@ -156,6 +157,7 @@ public class AutoSolver {
                 realisable=false;
                 fin = true;
             }
+            loops++;
         }
         long end = System.currentTimeMillis();
         if (end-start > 0){
@@ -174,5 +176,7 @@ public class AutoSolver {
             }
             Main.showMaze(tab);
         }
+        System.out.println("Le solver s'est terminé en "+((end-start)/10000000.0)+" millisecondes et a effectué "+loops+" boucles.");
+
     }
 }
