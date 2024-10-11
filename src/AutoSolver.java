@@ -19,7 +19,7 @@ public class AutoSolver {
 //        chemin(tableau);
 
     //Fonction qui récupère en argument un tableau et qui renvoie la solution à celui-ci
-    static void chemin(String[][] tab){
+    static void pathSolver(String[][] tab){
 
         int x=1;
         int y=1;
