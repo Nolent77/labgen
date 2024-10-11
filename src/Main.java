@@ -639,7 +639,7 @@ public class Main {
                         System.out.println("⚠ Incorrect entry (please follow instructions) ⚠");
                     }
                 } while (posE % 2 == 0 || posE < 1 || posE > column - 2); // Boucle tant que ce n'est pas un entier impair
-                                                                          // et que la position sur la grille n'est pas valide
+                // et que la position sur la grille n'est pas valide
 
                 // Saisie de la position de la sortie (entier impair entre 1 et column-2)
                 do {
@@ -653,7 +653,7 @@ public class Main {
                         System.out.println("⚠ Incorrect entry (please follow instructions) ⚠");
                     }
                 } while (posS % 2 == 0 || posS < 1 || posS > column - 2); // Boucle tant que ce n'est pas un entier impair
-                                                                          // et que la position sur la grille n'est pas valide
+                // et que la position sur la grille n'est pas valide
 
                 mazeS = entry.nextLine();
                 // Saisie de la commande que veut lancer l'utilisateur

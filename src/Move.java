@@ -101,5 +101,5 @@ public class Move {
         //sortir du while pour afficher
         System.out.println("GG you win");
 
-}
+    }
 }

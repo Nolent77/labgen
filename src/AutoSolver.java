@@ -159,7 +159,7 @@ public class AutoSolver {
         }
         long end = System.currentTimeMillis();
         if (end-start > 0){
-        System.out.println("The Solver finished the maze in "+((end-start))+" milliseconds");
+            System.out.println("The Solver finished the maze in "+((end-start))+" milliseconds");
         } else { System.out.println("The Solver finished the maze in "+((end-start))+" millisecond"); }
         if (!realisable){
             System.out.println("Non réalisable");
